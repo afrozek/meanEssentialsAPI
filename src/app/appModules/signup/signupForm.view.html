@@ -1,0 +1,129 @@
+	<div class="floatingFormContainer floatingFormContainerLarge centerDiv whiteBg mb30 fadeSlideDownLeaveTransition" ng-if="!signupCtrl.signupSuccess">
+
+		
+			<div class="verticalAlign fadeTransition"  ng-if="signupCtrl.submitForm">
+				<div class="bounceSpinner">
+	            	<div class="double-bounce1"></div>
+	            	<div class="double-bounce2"></div>
+	            </div>
+            </div>
+
+		
+		<div  ng-if="!signupCtrl.submitForm" class="fadeTransition">
+			<form class="form  centerElement " name="signupForm" novalidate>
+
+				<h1 class="formHeading centerText">Sign Up</h1>
+				<h4 class="formSubHeading centerText mb60">Create your account below to get started.</h4>
+
+			
+				<div class="row">
+					<div class="col-md-6">
+					<!-- input divider -->
+						<label class="formLabel" for="username">Username</label>
+						
+						<input ng-model="signupCtrl.signupForm.username"
+							   ng-class="{'fieldErrorBorder': signupForm.username.customError}"
+							   ng-keyup="signupCtrl.validateFormFields(signupForm)"
+							   ng-focus="signupCtrl.validateFormFields(signupForm)"
+							   name="username"
+							   type="text" class="form-control block " id="username" aria-describedby="basic-addon3" autofocus="on" autocomplete="off"   
+						>
+
+						<div class="fieldErrors">
+							<p>{{signupForm.username.customError}}</p>
+						</div>
+					<!-- end input divider -->
+					</div>
+					<div class="col-md-6">
+					<!-- input divider -->
+						<label class="formLabel" for="email">email</label>
+						
+						<input ng-model="signupCtrl.signupForm.email"
+							   ng-class="{'fieldErrorBorder': signupForm.email.customError}"
+							   ng-keyup="signupCtrl.validateFormFields(signupForm)"
+							   ng-focus="signupCtrl.validateFormFields(signupForm)"
+							   name="email"
+							   type="email" class="form-control block " id="email" aria-describedby="basic-addon3" autofocus="on" autocomplete="off"   
+						>
+
+						<div class="fieldErrors">
+							<p>{{signupForm.email.customError}}</p>
+						</div>
+					<!-- end input divider -->
+					</div>
+				</div>
+
+
+				
+				<div class="row">
+					<div class="col-md-6">
+					<!-- input divider -->
+						<label class="formLabel" for="password">Password</label>
+						
+						 <input ng-model="signupCtrl.signupForm.password"
+						 		ng-class="{'fieldErrorBorder': signupForm.password.customError}"
+								ng-keyup="signupCtrl.validateFormFields(signupForm)"
+							    ng-focus="signupCtrl.validateFormFields(signupForm)"
+						   		type="password" class="	form-control block" 
+						   		id="password" aria-describedby="basic-addon3" 
+						   		name="password">
+						<div class="fieldErrors">
+							<p>{{signupForm.password.customError}}</p>
+						</div>
+					<!-- end input divider -->	
+					</div>
+					<div class="col-md-6">
+					<!-- input divider -->
+						<label class="formLabel" for="confirmPass">Confirm Password</label>
+						
+						 <input ng-model="signupCtrl.signupForm.confirmPass"
+						 		ng-class="{'fieldErrorBorder': signupForm.confirmPass.customError}"
+								ng-keyup="signupCtrl.validateFormFields(signupForm)"
+							    ng-focus="signupCtrl.validateFormFields(signupForm)"
+						   		type="confirmPass" class="	form-control block" 
+						   		id="confirmPass" aria-describedby="basic-addon3" 
+						   		name="confirmPass">
+						<div class="fieldErrors">
+							<p>{{signupForm.confirmPass.customError}}</p>
+						</div>
+					<!-- end input divider -->
+						
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<no-captcha
+						    g-recaptcha-response="signupCtrl.recaptcha"
+						    theme='light'
+						    control="noCaptchaControl"
+						    site-key="6LcwgSUTAAAAANU4yRy6lQQurHuDIzaukBI662L8">
+						</no-captcha>
+					</div>
+				</div>
+
+
+
+
+
+
+
+				<!-- form error -->
+				<div class="formError mb10">
+					{{signupCtrl.signupError}}
+				</div>
+				
+				<button type="submit" class="btn btn-success btn-lg btn-block" ng-disabled="" ng-click="signupCtrl.signup(signupForm)">Sign Up</button>
+			</form>
+
+			<hr>
+			<div class="helpBox mt30">
+				<h4 class="heading centerText">Already Have An Account?</h4>
+				<h5 class="content centerText">
+					<a ui-sref="app.auth.login">Login</a>
+				</h5>
+			</div>
+		</div>
+
+		
+	</div>

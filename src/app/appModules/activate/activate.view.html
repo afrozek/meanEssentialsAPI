@@ -1,0 +1,50 @@
+	<div class="floatingFormContainer   floatingFormContainerExtraSmall centerDiv whiteBg mb30 fadeSlideDownLeaveTransition">	
+		
+		<!-- activation request complete -->
+		<div  class="fadeTransition" ng-if="activateCtrl.activateStatus != null ">
+
+
+
+			<!-- <h1 class="heading centerText">
+				Account Activation
+			</h1> -->
+
+			<div class="gridbotContainer">
+				<img class="gridbotSmall centerElement" ng-src="{{activateCtrl.imageSrc}}" alt="gridbot">
+			</div>
+
+			<h3 class="gridbotHeading centerText" ng-bind="activateCtrl.heading">
+	
+			</h3>
+
+			<!-- the result message-->
+			<h4 class="subHeading centerText" ng-bind="activateCtrl.subHeading">
+				
+			</h4>
+
+			<button class="btn btn-success btn-lg btn-block" ui-sref="{{activateCtrl.buttonStateRef}}" ng-bind="activateCtrl.buttonText"></button>
+
+			
+			<div class="helpBox mt30">
+				<h5 class="content centerText">
+					<a ui-sref="app.landing.home">Back to Home</a>
+				</h5>
+			</div>
+
+		</div>
+		
+		<!-- activating spinner -->
+		<div class="fadeTransition" ng-if="activateCtrl.activateStatus == null" >
+			<div class="verticalAlign fadeTransition"  >
+				<div class="bounceSpinner">
+	            	<div class="double-bounce1"></div>
+	            	<div class="double-bounce2"></div>
+	            </div>
+	            <h5 class="spinnerHeading">
+	            	Activating Account
+	            </h5>
+            </div>
+		</div>
+
+		
+	</div>

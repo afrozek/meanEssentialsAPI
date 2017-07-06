@@ -1,0 +1,28 @@
+<div id="notifyContainer" >
+	
+	<div class="notification notificationAnimation" ng-repeat="message in messages" >
+		
+			<div class="imgContainer {{message.class}} ">
+				<img class="fl" src="assets/images/"  alt="img">
+			</div>
+			<div class="messageContainer">
+				<div class="message">
+					{{message.data}}
+				</div>
+				<i class="fa fa-times close" aria-hidden="true" ng-click="close(message)"></i>
+			</div>
+	</div>
+
+<div class="form-group fr" ng-hide="true">
+	<input type="text" ng-model="newMessage">
+	<button ng-click="info(newMessage)">notify</button>
+	<button ng-click="success(newMessage)">notify</button>
+	<button ng-click="error(newMessage)">notify</button>
+</div>
+	
+</div>
+
+
+
+
+

@@ -1,0 +1,28 @@
+	<div class="floatingFormContainer  centerDiv whiteBg mb30 fadeSlideDownLeaveTransition">	
+		
+		<div  class="fadeTransition">
+
+			<div class="gridbotContainer">
+				<img class="gridbotSmall centerElement" src="assets/images/gridbotSuccess@3x.png" alt="gridbot">
+			</div>
+
+			<h3 class="gridbotHeading centerText">
+				Thank You
+			</h3>
+			<h4 class="subHeading centerText">
+				We've sent you the account activation email.
+			</h4>
+			
+			<button class="btn btn-success btn-lg btn-block" ng-click="signupCtrl.resendEmail()" ng-class='{"disabled" : signupCtrl.resendTimer !== 30}'>Resend email <span ng-hide="signupCtrl.resendTimer == 30">({{signupCtrl.resendTimer}})</span></button>
+
+			
+			<div class="helpBox mt30">
+				<h5 class="content centerText">
+					<a ui-sref="app.landing.home">Back to Home</a>
+				</h5>
+			</div>
+
+		</div>
+
+		
+	</div>

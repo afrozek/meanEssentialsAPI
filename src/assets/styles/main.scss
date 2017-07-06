@@ -1,0 +1,243 @@
+@import 'colors';
+@import 'animations';
+@import 'variables';
+@import 'helpers';
+@import 'fonts';
+
+html,body{
+height: 100%;
+
+
+}
+
+body{
+	font-family: helvetica, arial, 'sans-serif';
+	font-size: 16px;
+}
+
+#mainView{
+	
+}
+
+/*------------HTML DEFAULTS------------*/
+
+hr{
+  border-color: silver;	
+  box-shadow: 0 1px 2px 0 lightgrey;
+}
+
+
+//36px
+h1{ font-size: 2.250em;}
+
+//24px
+h2{ font-size: 1.5em;}
+
+//18px
+h3{ font-size: 1.125em;}
+
+//16px
+h4{ font-size: 1em;}
+
+//14px
+h5{ font-size: 0.875em;}
+
+//12px
+h6{ font-size: 0.75em;}
+
+a:hover{
+	text-decoration: none;
+}
+
+/*------------ HEADINGS ------------*/
+
+
+
+
+
+
+
+/*------------ TEXT STYLES ------------*/
+
+
+
+
+
+.textExtraSmall{
+	font-size: $em12px !important;
+}
+
+.textSmall{
+	font-size: $em14px !important;
+}
+
+.textNormal{
+	font-size: $em16px !important;
+}
+
+.textMedium{
+	font-size: $em24px !important;
+}
+
+.textLarge{
+	font-size: $em32px !important;
+}
+
+// .textExtraLarge{
+// 	font-size: $em32px !important;
+// }
+
+
+/*------------ TEXT COLORS ------------*/
+
+
+
+.whiteText{
+	color: white !important;
+}
+
+
+/*------------ IMAGE SIZES ------------*/
+
+.imgMedium{
+	min-width: 150px;
+}
+
+
+
+/*------------BG CLASSES------------*/
+
+
+
+.info{ background: darkorange;}
+.success{ background: mediumseagreen;}
+.error{ background: darkred;}
+
+
+
+
+
+
+
+
+/*------------  NOTIFY  ------------*/
+#notifyContainer{
+	position: fixed;
+	width: 50%;
+	z-index: 99;
+	top: 20px;
+	left: 20px;
+
+	.notification{
+		overflow: hidden;
+		position: relative;
+		width: 350px;
+		height: 70px;
+		display: block;
+		transition: .3s;
+		margin-bottom: 1px;
+
+		.imgContainer{
+			width: 70px;
+			height: 70px;
+			position: absolute;
+
+			img{
+				padding: 10px;
+				width: 50px;
+				height: auto;
+				display: block;
+				box-sizing: content-box;	
+			}
+		}//imgContainer
+		
+		.messageContainer{
+			background: white;
+			position: absolute;
+			height: 70px;
+			width: 280px;
+			left: 70px;
+			.message{
+				padding: 15px;
+			}
+
+			.close{
+				color: dimgray;
+				position: absolute;
+				right: 0px;
+				top: 0px;
+				padding: 7px 7px;
+			}
+		}
+
+	}
+
+
+}//end notif
+
+
+
+
+
+/*------------ BUTTONS ------------*/
+
+
+
+
+
+
+
+
+
+
+/*------------LOGIN PAGE------------*/
+
+
+
+
+
+
+/*------------DASHBOARD------------*/
+
+
+
+
+
+
+
+
+
+
+
+/*------------  NAVBAR  ------------*/
+
+
+
+//offsets the position fixed of the fixed navbar
+.hasLandingNav{
+	padding-top: 130px;
+}
+
+#newsBar{
+	background: grey;
+	color: white;
+	// padding: 5px;
+}
+
+/*------------ LANDING PAGES ------------*/
+.landingRows{
+	min-height: 300px;
+	border-bottom: 1px solid grey;
+	position: relative;
+
+	
+
+
+}//end landing rows
+
+
+
+
+
+
+

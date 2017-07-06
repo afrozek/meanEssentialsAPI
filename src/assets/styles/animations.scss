@@ -1,0 +1,322 @@
+
+@import 'colors';
+
+/*------------BASIC FADE------------*/
+.fadeTransition{
+    &.ng-enter {
+        transition: .3s;
+        opacity: 0;
+    }
+    &.ng-enter-active {
+        opacity: 1;
+    }
+
+    &.ng-leave {
+        transition: .3s;  
+        opacity: 1;
+    }
+ 
+    
+    &.ng-leave-active {
+        opacity: 0;
+    }
+}
+
+.fadeLeaveTransition{
+
+
+    &.ng-leave {
+        transition: .3s;  
+        opacity: 1;
+    }
+ 
+    
+    &.ng-leave-active {
+        opacity: 0;
+    }
+}
+
+/*------------SLIDING DOWN FADE------------*/
+
+.fadeSlideDownEnterTransition{
+    &.ng-enter {
+        transition: .3s;
+        opacity: 0;
+        transform: translate(0px, -500px);
+    }
+ 
+    &.ng-enter-active {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+
+.fadeSlideDownLeaveTransition{
+
+    &.ng-leave {
+        transition: .3s;
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+ 
+  
+    &.ng-leave-active {
+      transform: translate(0px, -500px);
+        opacity: 0;
+    }
+}
+
+
+/*------------SLIDING UP FADE------------*/
+
+.fadeSlideUpEnterTransition{
+    &.ng-enter {
+        transition: .3s;
+        opacity: 0;
+        transform: translate(0px, 500px);
+    }
+ 
+    &.ng-enter-active {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+
+.fadeSlideUpLeaveTransition{
+
+    &.ng-leave {
+        transition: .3s;
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+ 
+  
+    &.ng-leave-active {
+      transform: translate(0px, 500px);
+        opacity: 0;
+    }
+}
+
+
+
+/*------------LEFT TO RIGHT FADE------------*/
+
+.fadeSlideFromLeftEnterTransition{
+    &.ng-enter {
+        transition: .3s;
+        opacity: 0;
+        transform: translate(-1000px,0px);
+    }
+ 
+    &.ng-enter-active {
+        opacity: 1;
+        transform: translate(0px, 0px);
+    }
+}
+
+.fadeSlideToRightLeaveTransition{
+
+    &.ng-leave {
+        transition: .3s;
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+ 
+  
+    &.ng-leave-active {
+      transform: translate(1000px,0px);
+        opacity: 0;
+    }
+}
+
+
+/*------------thumbSlide------------*/
+// .thumbSlide{
+//     &.ng-enter {
+//         transition: .3s;
+//         transform:  scale(0);
+//     }
+//     &.ng-enter-active {
+//         opacity: 1;
+//         transform:  scale(1);
+//     }
+
+//     &.ng-leave {
+//         transition: .3s;  
+//         opacity: 1;
+//     }
+ 
+    
+//     &.ng-leave-active {
+//         opacity: 0;
+//     }
+// }
+
+.thumbSlide{
+   
+
+    &.ng-enter {
+      transition-delay: 2s;
+        transition: .3s;
+        // transform:  scale(0);
+          height: 50px;
+         width: 50px;
+         overflow: hidden;
+         text-overflow: clip;
+    }
+    &.ng-enter-active {
+      transition-delay: 2s;
+        opacity: 1;
+        // transform:  scale(1);
+        width: 230px;
+    }
+
+    &.ng-leave {
+      transition-delay: 2s;
+        transition: .3s;  
+        opacity: 1;
+    }
+ 
+    
+    &.ng-leave-active {
+      transition-delay: 2s;
+        opacity: 0;
+    }
+}
+
+@keyframes mymove {
+    0%   {top: 0px; background: red; width: 100px;}
+    100% {top: 200px; background: yellow; width: 300px;}
+}
+
+
+
+.notificationAnimation{
+
+  &.ng-enter { 
+      -webkit-animation: enter 1s cubic-bezier(0.390, 0.575, 0.565, 1.000);
+      animation: enter .5s cubic-bezier(0.390, 0.575, 0.565, 1.000);
+                 // jiggle .2s cubic-bezier(0.390, 0.575, 0.565, 1.000) .6s;
+      display: block;
+      position: relative;
+  } 
+
+  &.ng-leave { 
+      -webkit-animation: enter 1s cubic-bezier(0.390, 0.575, 0.565, 1.000);
+      animation: enter .5s cubic-bezier(0.390, 0.575, 0.565, 1.000);
+      display: block;
+      position: relative;
+      animation-direction: reverse;
+  } 
+
+
+}
+
+
+
+@-webkit-keyframes enter {
+    from {
+        opacity: 0;
+        min-height: 70px;
+        width: 70px;
+        overflow: hidden;
+        text-overflow: clip;
+        transform: scale(0);   
+    }
+
+    30% {
+        transform: scale(1.2);
+        left: 0px;
+        width: 70px;
+        overflow: hidden;
+        text-overflow: clip;
+    }
+
+     35% {
+        transform: scale(1);
+    }
+
+    90%{
+        left: 0px;
+        width: 70px;
+        overflow: hidden;
+        text-overflow: clip;
+    }
+    to {
+        opacity: 1;
+        min-height: 70px;
+        left: 0px;
+        top: 0px;
+        width: 300px;
+    }
+}
+
+@-webkit-keyframes jiggle {
+    from {
+        transform: rotate(0deg);   
+    }
+
+    25%{
+        transform: rotate(2deg);
+    }
+
+    75%{
+        transform: rotate(-2deg);
+    }
+
+    to {
+      transform: rotate(0deg);
+    }
+}
+
+/*------------GREEN LOADING SPINNER------------*/
+
+// spinners
+
+
+
+.bounceSpinner {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  margin: 20px auto;
+}
+
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: palegreen;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+  background: mediumseagreen;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+
+
+

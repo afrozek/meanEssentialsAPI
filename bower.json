@@ -1,0 +1,28 @@
+{
+  "name": "meanEssentials",
+  "description": "A MEAN Stack Boiler Plate with build system",
+  "main": "index.js",
+  "authors": [
+    "Afroze Khan"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-ui-router": "0.3.1",
+    "bootstrap": "^3.3.7",
+    "angular-animate": "1.5.8",
+    "components-font-awesome": "^4.7.0",
+    "angular-bowser": "^0.0.4",
+    "angular-recaptcha": "^3.2.1",
+    "angular-no-captcha": "^0.6.0",
+    "angular-cookies": "^1.6.1"
+  }
+}

@@ -1,0 +1,717 @@
+/*------------COLORS------------*/
+/*------------COLORS------------*/
+/*------------BASIC FADE------------*/
+.fadeTransition.ng-enter {
+  transition: .3s;
+  opacity: 0; }
+
+.fadeTransition.ng-enter-active {
+  opacity: 1; }
+
+.fadeTransition.ng-leave {
+  transition: .3s;
+  opacity: 1; }
+
+.fadeTransition.ng-leave-active {
+  opacity: 0; }
+
+.fadeLeaveTransition.ng-leave {
+  transition: .3s;
+  opacity: 1; }
+
+.fadeLeaveTransition.ng-leave-active {
+  opacity: 0; }
+
+/*------------SLIDING DOWN FADE------------*/
+.fadeSlideDownEnterTransition.ng-enter {
+  transition: .3s;
+  opacity: 0;
+  transform: translate(0px, -500px); }
+
+.fadeSlideDownEnterTransition.ng-enter-active {
+  opacity: 1;
+  transform: translate(0px, 0px); }
+
+.fadeSlideDownLeaveTransition.ng-leave {
+  transition: .3s;
+  transform: translate(0px, 0px);
+  opacity: 1; }
+
+.fadeSlideDownLeaveTransition.ng-leave-active {
+  transform: translate(0px, -500px);
+  opacity: 0; }
+
+/*------------SLIDING UP FADE------------*/
+.fadeSlideUpEnterTransition.ng-enter {
+  transition: .3s;
+  opacity: 0;
+  transform: translate(0px, 500px); }
+
+.fadeSlideUpEnterTransition.ng-enter-active {
+  opacity: 1;
+  transform: translate(0px, 0px); }
+
+.fadeSlideUpLeaveTransition.ng-leave {
+  transition: .3s;
+  transform: translate(0px, 0px);
+  opacity: 1; }
+
+.fadeSlideUpLeaveTransition.ng-leave-active {
+  transform: translate(0px, 500px);
+  opacity: 0; }
+
+/*------------LEFT TO RIGHT FADE------------*/
+.fadeSlideFromLeftEnterTransition.ng-enter {
+  transition: .3s;
+  opacity: 0;
+  transform: translate(-1000px, 0px); }
+
+.fadeSlideFromLeftEnterTransition.ng-enter-active {
+  opacity: 1;
+  transform: translate(0px, 0px); }
+
+.fadeSlideToRightLeaveTransition.ng-leave {
+  transition: .3s;
+  transform: translate(0px, 0px);
+  opacity: 1; }
+
+.fadeSlideToRightLeaveTransition.ng-leave-active {
+  transform: translate(1000px, 0px);
+  opacity: 0; }
+
+/*------------thumbSlide------------*/
+.thumbSlide.ng-enter {
+  transition-delay: 2s;
+  transition: .3s;
+  height: 50px;
+  width: 50px;
+  overflow: hidden;
+  text-overflow: clip; }
+
+.thumbSlide.ng-enter-active {
+  transition-delay: 2s;
+  opacity: 1;
+  width: 230px; }
+
+.thumbSlide.ng-leave {
+  transition-delay: 2s;
+  transition: .3s;
+  opacity: 1; }
+
+.thumbSlide.ng-leave-active {
+  transition-delay: 2s;
+  opacity: 0; }
+
+@keyframes mymove {
+  0% {
+    top: 0px;
+    background: red;
+    width: 100px; }
+  100% {
+    top: 200px;
+    background: yellow;
+    width: 300px; } }
+
+.notificationAnimation.ng-enter {
+  -webkit-animation: enter 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+  animation: enter 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+  display: block;
+  position: relative; }
+
+.notificationAnimation.ng-leave {
+  -webkit-animation: enter 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+  animation: enter 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+  display: block;
+  position: relative;
+  animation-direction: reverse; }
+
+@-webkit-keyframes enter {
+  from {
+    opacity: 0;
+    min-height: 70px;
+    width: 70px;
+    overflow: hidden;
+    text-overflow: clip;
+    transform: scale(0); }
+  30% {
+    transform: scale(1.2);
+    left: 0px;
+    width: 70px;
+    overflow: hidden;
+    text-overflow: clip; }
+  35% {
+    transform: scale(1); }
+  90% {
+    left: 0px;
+    width: 70px;
+    overflow: hidden;
+    text-overflow: clip; }
+  to {
+    opacity: 1;
+    min-height: 70px;
+    left: 0px;
+    top: 0px;
+    width: 300px; } }
+
+@-webkit-keyframes jiggle {
+  from {
+    transform: rotate(0deg); }
+  25% {
+    transform: rotate(2deg); }
+  75% {
+    transform: rotate(-2deg); }
+  to {
+    transform: rotate(0deg); } }
+
+/*------------GREEN LOADING SPINNER------------*/
+.bounceSpinner {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  margin: 20px auto; }
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: palegreen;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out; }
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+  background: mediumseagreen; }
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% {
+    -webkit-transform: scale(0); }
+  50% {
+    -webkit-transform: scale(1); } }
+
+@keyframes sk-bounce {
+  0%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0); }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1); } }
+
+h6 {
+  font-size: 0.75em; }
+
+h5 {
+  font-size: 0.875em; }
+
+h4 {
+  font-size: 1em; }
+
+h3 {
+  font-size: 1.125em; }
+
+h2 {
+  font-size: 1.5em; }
+
+h1 {
+  font-size: 2em; }
+
+/*=========================================================
+						              HELPERS
+=========================================================*/
+/*
+* Media queries
+*/
+@media (max-width: 991px) {
+  .cpTablet {
+    padding: 0px; } }
+
+/*
+* common helpers
+*/
+/* 
+  Allow angular.js to be loaded in body, hiding cloaked elements until 
+  templates compile.  The !important is important given that there may be 
+  other selectors that are more specific or come later and might alter display.  
+ */
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important; }
+
+.clearFix:before, .clearFix:after {
+  content: "";
+  display: table; }
+
+.clearFix:after {
+  clear: both; }
+
+.fullHeight {
+  height: 100%;
+  overflow: auto; }
+
+.fullWidth {
+  width: 100%; }
+
+.hide {
+  display: none; }
+
+.centerElement {
+  margin-left: auto;
+  margin-right: auto; }
+
+.halfOpacity {
+  opacity: .5; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.centerText {
+  text-align: center; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.verticalAlign {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.horizontalAlign {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); }
+
+.cm {
+  margin: 0 !important; }
+
+.clm {
+  margin-left: 0 !important; }
+
+.crm {
+  margin-right: 0 !important; }
+
+.ctm {
+  margin-top: 0 !important; }
+
+.cbm {
+  margin-bottom: 0 !important; }
+
+.cp {
+  padding: 0 !important; }
+
+.clp {
+  padding-left: 0 !important; }
+
+.crp {
+  padding-right: 0 !important; }
+
+.ctp {
+  padding-top: 0 !important; }
+
+.cbp {
+  padding-bottom: 0 !important; }
+
+.mt5 {
+  margin-top: 5px !important; }
+
+.mt10 {
+  margin-top: 10px !important; }
+
+.mt15 {
+  margin-top: 15px !important; }
+
+.mt20 {
+  margin-top: 20px !important; }
+
+.mt30 {
+  margin-top: 30px !important; }
+
+.mt40 {
+  margin-top: 40px !important; }
+
+.mt50 {
+  margin-top: 50px !important; }
+
+.mt60 {
+  margin-top: 60px !important; }
+
+.mb5 {
+  margin-bottom: 5px !important; }
+
+.mb10 {
+  margin-bottom: 10px !important; }
+
+.mb15 {
+  margin-bottom: 15px !important; }
+
+.mb20 {
+  margin-bottom: 20px !important; }
+
+.mb30 {
+  margin-bottom: 30px !important; }
+
+.mb40 {
+  margin-bottom: 40px !important; }
+
+.mb60 {
+  margin-bottom: 60px !important; }
+
+.mb80 {
+  margin-bottom: 80px !important; }
+
+.mt100 {
+  margin-top: 100px !important; }
+
+.mb100 {
+  margin-bottom: 100px !important; }
+
+.mr5 {
+  margin-right: 5px !important; }
+
+.mr10 {
+  margin-right: 10px !important; }
+
+.mr15 {
+  margin-right: 15px !important; }
+
+.mr20 {
+  margin-right: 20px !important; }
+
+.mr30 {
+  margin-right: 30px !important; }
+
+.mr40 {
+  margin-right: 40px !important; }
+
+.mr60 {
+  margin-right: 60px !important; }
+
+.mr70 {
+  margin-right: 70px !important; }
+
+.mr80 {
+  margin-right: 80px !important; }
+
+.mr90 {
+  margin-right: 90px !important; }
+
+.mr100 {
+  margin-right: 100px !important; }
+
+.p10 {
+  padding: 10px !important; }
+
+.p20 {
+  padding: 20px !important; }
+
+.p30 {
+  padding: 30px !important; }
+
+.p40 {
+  padding: 40px !important; }
+
+.p50 {
+  padding: 50px !important; }
+
+.p60 {
+  padding: 60px !important; }
+
+.p70 {
+  padding: 70px !important; }
+
+.p80 {
+  padding: 80px !important; }
+
+.p90 {
+  padding: 90px !important; }
+
+.pl20 {
+  padding-left: 20px !important; }
+
+.pb10 {
+  padding-bottom: 10px !important; }
+
+.pb20 {
+  padding-bottom: 20px !important; }
+
+.pb30 {
+  padding-bottom: 30px !important; }
+
+.pb40 {
+  padding-bottom: 40px !important; }
+
+.pb50 {
+  padding-bottom: 50px !important; }
+
+.pb60 {
+  padding-bottom: 60px !important; }
+
+.pb80 {
+  padding-bottom: 80px !important; }
+
+.pt10 {
+  padding-top: 10px !important; }
+
+.pt20 {
+  padding-top: 20px !important; }
+
+.pt30 {
+  padding-top: 30px !important; }
+
+.pt40 {
+  padding-top: 40px !important; }
+
+.pt50 {
+  padding-top: 50px !important; }
+
+.pt60 {
+  padding-top: 60px !important; }
+
+.pt80 {
+  padding-top: 80px !important; }
+
+.pr10 {
+  padding-right: 10px !important; }
+
+.pr20 {
+  padding-right: 20px !important; }
+
+.pr30 {
+  padding-right: 30px !important; }
+
+.pr40 {
+  padding-right: 40px !important; }
+
+.pr50 {
+  padding-right: 50px !important; }
+
+.pr60 {
+  padding-right: 60px !important; }
+
+.pl60 {
+  padding-left: 60px !important; }
+
+.pl10 {
+  padding-left: 10px !important; }
+
+.pl20 {
+  padding-left: 20px !important; }
+
+.pl30 {
+  padding-left: 30px !important; }
+
+.pl40 {
+  padding-left: 40px !important; }
+
+.pl50 {
+  padding-left: 50px !important; }
+
+.pl60 {
+  padding-left: 60px !important; }
+
+.pl60 {
+  padding-left: 60px !important; }
+
+.pl100 {
+  padding-left: 100px !important; }
+
+@font-face {
+  font-family: 'Muli-ExtraLight';
+  font-style: normal;
+  src: url("../assets/fonts/Muli-ExtraLight.ttf"); }
+
+@font-face {
+  font-family: 'Muli-ExtraLightItalic';
+  font-style: normal;
+  src: url("../assets/fonts/Muli-ExtraLightItalic.ttf"); }
+
+@font-face {
+  font-family: 'Muli-Bold';
+  font-style: normal;
+  src: url("../assets/fonts/Muli-Bold.ttf"); }
+
+@font-face {
+  font-family: 'Muli-BoldItalic';
+  font-style: normal;
+  src: url("../assets/fonts/Muli-BoldItalic.ttf"); }
+
+@font-face {
+  font-family: 'Muli-Light';
+  font-style: normal;
+  src: url("../assets/fonts/Muli-Light.ttf"); }
+
+@font-face {
+  font-family: 'Muli-LightItalic';
+  font-style: normal;
+  src: url("../assets/fonts/Muli-LightItalic.ttf"); }
+
+@font-face {
+  font-family: 'Muli-SemiBold';
+  font-style: normal;
+  src: url("../assets/fonts/Muli-SemiBold.ttf"); }
+
+@font-face {
+  font-family: 'Muli-SemiBoldItalic';
+  font-style: normal;
+  src: url("../assets/fonts/Muli-SemiBoldItalic.ttf"); }
+
+@font-face {
+  font-family: 'Muli-Normal';
+  font-style: normal;
+  src: url("../assets/fonts/Muli.ttf"); }
+
+@font-face {
+  font-family: 'Muli-Italic';
+  font-style: normal;
+  src: url("../assets/fonts/Muli-Italic.ttf"); }
+
+@font-face {
+  font-family: 'Avenir';
+  font-style: normal;
+  src: url("../assets/fonts/AvenirLTStd-Book.otf"); }
+
+@font-face {
+  font-family: 'Avenir-Light';
+  font-style: normal;
+  src: url("../assets/fonts/AvenirLTStd-Light.otf"); }
+
+@font-face {
+  font-family: 'Avenir-Roman';
+  font-style: normal;
+  src: url("../assets/fonts/AvenirLTStd-Roman.otf"); }
+
+html, body {
+  height: 100%; }
+
+body {
+  font-family: helvetica, arial, 'sans-serif';
+  font-size: 16px; }
+
+/*------------HTML DEFAULTS------------*/
+hr {
+  border-color: silver;
+  box-shadow: 0 1px 2px 0 lightgrey; }
+
+h1 {
+  font-size: 2.250em; }
+
+h2 {
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1.125em; }
+
+h4 {
+  font-size: 1em; }
+
+h5 {
+  font-size: 0.875em; }
+
+h6 {
+  font-size: 0.75em; }
+
+a:hover {
+  text-decoration: none; }
+
+/*------------ HEADINGS ------------*/
+/*------------ TEXT STYLES ------------*/
+.textExtraSmall {
+  font-size: 0.75em !important; }
+
+.textSmall {
+  font-size: 0.875em !important; }
+
+.textNormal {
+  font-size: 1em !important; }
+
+.textMedium {
+  font-size: 1.5em !important; }
+
+.textLarge {
+  font-size: 2em !important; }
+
+/*------------ TEXT COLORS ------------*/
+.whiteText {
+  color: white !important; }
+
+/*------------ IMAGE SIZES ------------*/
+.imgMedium {
+  min-width: 150px; }
+
+/*------------BG CLASSES------------*/
+.info {
+  background: darkorange; }
+
+.success {
+  background: mediumseagreen; }
+
+.error {
+  background: darkred; }
+
+/*------------  NOTIFY  ------------*/
+#notifyContainer {
+  position: fixed;
+  width: 50%;
+  z-index: 99;
+  top: 20px;
+  left: 20px; }
+  #notifyContainer .notification {
+    overflow: hidden;
+    position: relative;
+    width: 350px;
+    height: 70px;
+    display: block;
+    transition: .3s;
+    margin-bottom: 1px; }
+    #notifyContainer .notification .imgContainer {
+      width: 70px;
+      height: 70px;
+      position: absolute; }
+      #notifyContainer .notification .imgContainer img {
+        padding: 10px;
+        width: 50px;
+        height: auto;
+        display: block;
+        box-sizing: content-box; }
+    #notifyContainer .notification .messageContainer {
+      background: white;
+      position: absolute;
+      height: 70px;
+      width: 280px;
+      left: 70px; }
+      #notifyContainer .notification .messageContainer .message {
+        padding: 15px; }
+      #notifyContainer .notification .messageContainer .close {
+        color: dimgray;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        padding: 7px 7px; }
+
+/*------------ BUTTONS ------------*/
+/*------------LOGIN PAGE------------*/
+/*------------DASHBOARD------------*/
+/*------------  NAVBAR  ------------*/
+.hasLandingNav {
+  padding-top: 130px; }
+
+#newsBar {
+  background: grey;
+  color: white; }
+
+/*------------ LANDING PAGES ------------*/
+.landingRows {
+  min-height: 300px;
+  border-bottom: 1px solid grey;
+  position: relative; }
+
+/*# sourceMappingURL=main.css.map */

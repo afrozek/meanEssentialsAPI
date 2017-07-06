@@ -1,0 +1,74 @@
+	<div class="floatingFormContainer floatingFormContainerMedium centerDiv whiteBg mb30 fadeSlideDownLeaveTransition" ng-if="!loginCtrl.loginSuccess">
+
+		
+			<div class="verticalAlign fadeTransition"  ng-if="loginCtrl.submitForm">
+				<div class="bounceSpinner">
+	            	<div class="double-bounce1"></div>
+	            	<div class="double-bounce2"></div>
+	            </div>
+	            <h5 class="spinnerHeading">
+		            	Logging In
+		        </h5>
+            </div>
+
+		
+		<div  ng-if="!loginCtrl.submitForm" class="fadeTransition">
+			<form class="form formSmall  centerElement " name="loginForm" novalidate>
+
+				<h1 class="formHeading centerText">Login</h1>
+
+				<!-- <h4 class="formSubHeading centerText">Welcome Back</h4> -->
+
+				<label class="formLabel" for="username">Username</label>
+				
+				<input ng-model="loginCtrl.loginForm.username"
+					   ng-class="{'fieldErrorBorder': loginForm.username.customError}"
+					   ng-keyup="loginCtrl.validateFormFields(loginForm)"
+					   ng-focus="loginCtrl.validateFormFields(loginForm)"
+					   name="username"
+					   type="text" class="form-control block " id="username" aria-describedby="basic-addon3" autofocus="on" autocomplete="off"   
+				>
+
+				<div class="fieldErrors">
+					<p>{{loginForm.username.customError}}</p>
+				</div>
+				
+				<label class="formLabel" for="password">Password</label>
+				
+				 <input ng-model="loginCtrl.loginForm.password"
+				 		ng-class="{'fieldErrorBorder': loginForm.password.customError}"
+						ng-keyup="loginCtrl.validateFormFields(loginForm)"
+					    ng-focus="loginCtrl.validateFormFields(loginForm)"
+				   		type="password" class="	form-control block" 
+				   		id="password" aria-describedby="basic-addon3" 
+				   		name="password">
+				<div class="fieldErrors">
+					<p>{{loginForm.password.customError}}</p>
+				</div>
+
+				<div class="formError mb10">
+					{{loginCtrl.loginError}}
+				</div>
+				
+				<button type="submit" class="btn btn-success  btn-block" ng-disabled="" ng-click="loginCtrl.login(loginForm)">Login</button>
+			</form>
+
+			<hr>
+			<div class="helpBox mt30 row">
+				<div class="col-md-6">
+					<h4 class="heading centerText">Forgot Something?</h4>
+					<h5 class="content centerText">
+						<a ui-sref="app.auth.forgotUsername">Username</a> or <a href="">Password</a>
+					</h5>
+				</div>
+				<div class="col-md-6">
+					<h4 class="heading centerText">Need An Account?</h4>
+					<h5 class="content centerText">
+						<a ui-sref="app.auth.signup">Signup</a> 
+					</h5>
+				</div>
+			</div>
+		</div>
+
+		
+	</div>

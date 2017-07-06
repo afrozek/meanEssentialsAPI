@@ -1,0 +1,44 @@
+{
+  "name": "meanEssentials",
+  "version": "1.0.0",
+  "description": "A MEAN Stack Boiler Plate with build system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Afroze Khan",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "jsonwebtoken": "^7.2.1",
+    "mongoose": "4.4.20",
+    "morgan": "^1.7.0",
+    "request": "^2.79.0"
+  },
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "gulp": "^3.9.1",
+    "gulp-angular-filesort": "^1.1.1",
+    "gulp-angular-templatecache": "^2.0.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-config": "^0.3.0",
+    "gulp-delete-lines": "0.0.7",
+    "gulp-filter": "^4.0.0",
+    "gulp-flatten": "^0.3.1",
+    "gulp-inject": "^4.1.0",
+    "gulp-load-plugins": "^1.3.0",
+    "gulp-main-bower-files": "^1.5.3",
+    "gulp-minify": "0.0.14",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-uglify": "^2.0.0",
+    "main-bower-files": "^2.13.1",
+    "pump": "^1.0.1",
+    "run-sequence": "^1.2.2",
+    "uglify-save-license": "^0.4.1",
+    "wiredep": "^4.0.0"
+  }
+}

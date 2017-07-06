@@ -1,0 +1,101 @@
+
+$muli: 'Muli-Normal';
+$muliItalic: 'Muli-Italic';
+
+$muliLight: 'Muli-Light';
+$muliLightItalic: 'Muli-LightItalic';
+
+$muliExtraLight: 'Muli-ExtraLight';
+$muliExtraLightItalic: 'Muli-ExtraLightItalic';
+
+
+$muliSemiBold: 'Muli-SemiBold';
+$muliSemiBoldItalic: 'Muli-SemiBoldItalic';
+
+$muliBold: 'Muli-Bold';
+$muliBoldItalic: 'Muli-BoldItalic';
+
+$avenir: 'Avenir';
+$avenirLight: 'Avenir-Light';
+$avenirRoman: 'Avenir-Roman';
+
+
+
+
+@font-face {
+  font-family: 'Muli-ExtraLight';
+  font-style: normal;
+  src: url('../assets/fonts/Muli-ExtraLight.ttf');
+}
+
+@font-face {
+  font-family: 'Muli-ExtraLightItalic';
+  font-style: normal;
+  src: url('../assets/fonts/Muli-ExtraLightItalic.ttf');
+}
+
+@font-face {
+  font-family: 'Muli-Bold';
+  font-style: normal;
+  src: url('../assets/fonts/Muli-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Muli-BoldItalic';
+  font-style: normal;
+  src: url('../assets/fonts/Muli-BoldItalic.ttf');
+}
+
+@font-face {
+  font-family: 'Muli-Light';
+  font-style: normal;
+  src: url('../assets/fonts/Muli-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Muli-LightItalic';
+  font-style: normal;
+  src: url('../assets/fonts/Muli-LightItalic.ttf');
+}
+
+@font-face {
+  font-family: 'Muli-SemiBold';
+  font-style: normal;
+  src: url('../assets/fonts/Muli-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'Muli-SemiBoldItalic';
+  font-style: normal;
+  src: url('../assets/fonts/Muli-SemiBoldItalic.ttf');
+}
+
+@font-face {
+  font-family: 'Muli-Normal';
+  font-style: normal;
+  src: url('../assets/fonts/Muli.ttf');
+}
+
+@font-face {
+  font-family: 'Muli-Italic';
+  font-style: normal;
+  src: url('../assets/fonts/Muli-Italic.ttf');
+}
+
+@font-face {
+  font-family: 'Avenir';
+  font-style: normal;
+  src: url('../assets/fonts/AvenirLTStd-Book.otf');
+}
+
+@font-face {
+  font-family: 'Avenir-Light';
+  font-style: normal;
+  src: url('../assets/fonts/AvenirLTStd-Light.otf');
+}
+
+@font-face {
+  font-family: 'Avenir-Roman';
+  font-style: normal;
+  src: url('../assets/fonts/AvenirLTStd-Roman.otf');
+}
